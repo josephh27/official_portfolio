@@ -1,3 +1,21 @@
+// Header Section
+.header {
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 100;
+   width: 100%;
+   height: auto;
+   margin: 0 auto;
+   transition: all 0.35s ease;
+   line-height: 1.5;
+
+   &.on-scroll {
+      background: var(--color-black-300);
+      box-shadow: var(--shadow-medium);
+   }
+}
+
 .navbar {
     display: flex;
     flex-direction: row;
@@ -7,6 +25,8 @@
     width: 100%;
     height: 4.25rem;
     margin: 0 auto;
+    padding: 0 1.25rem;
+      max-width: 1200px;
 }
 
 .menu {
@@ -44,27 +64,8 @@
        text-transform: uppercase;
        transition: all 0.3s ease;
     }
- 
-    &-block {
-       display: inline-block;
-       font-family: inherit;
-       font-size: 0.875rem;
-       font-weight: 500;
-       line-height: 1.25;
-       user-select: none;
-       white-space: nowrap;
-       text-align: center;
-       margin-left: auto;
-       padding: 0.65rem 1.5rem;
-       border-radius: 3rem;
-       text-transform: capitalize;
-       color: var(--color-white);
-       background-color: var(--color-blue-600);
-       box-shadow: var(--shadow-medium);
-       transition: all 0.3s ease-in-out;
-    }
 
-      // Media Query Breakpoint
+   // Media Query Breakpoint
    @media only screen and (min-width: 48rem) {
     position: relative;
     top: 0;
@@ -157,19 +158,33 @@
  }
 
 
- // Header Section
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-    transition: all 0.35s ease;
- 
-    &.on-scroll {
-       background: var(--color-black-300);
+
+ .brand {
+   font-family: inherit;
+   font-size: 1.6rem;
+   font-weight: 600;
+   line-height: 1.5;
+   letter-spacing: -1px;
+   color: var(--color-white-100);
+   text-transform: uppercase;
+}
+
+ .download-block {
+       display: inline-block;
+       font-family: inherit;
+       font-size: 0.875rem;
+       font-weight: 500;
+       line-height: 1.25;
+       user-select: none;
+       white-space: nowrap;
+       text-align: center;
+       margin-left: auto;
+       padding: 0.65rem 1.5rem;
+       border-radius: 3rem;
+       text-transform: capitalize;
+       color: var(--color-white);
+       background-color: var(--color-blue-600);
        box-shadow: var(--shadow-medium);
-    }
+       transition: all 0.3s ease-in-out;
  }
+
