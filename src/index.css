@@ -55,7 +55,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--color-black-500);
-  color: var(--color-white-100)
+  color: var(--color-white-100);
+  min-height: 100vh;
 }
 
 a,

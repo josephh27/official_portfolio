@@ -1,3 +1,7 @@
+.inner-wrapper {
+    max-width: 1200px;
+}
+
 .sections-container {
     display: flex;
     flex-direction: column;
@@ -5,10 +9,6 @@
 }
 
 .section {
-    max-width: 1200px;
     min-height: 100vh;
 }
 
-.inner-wrapper {
-    
-}
