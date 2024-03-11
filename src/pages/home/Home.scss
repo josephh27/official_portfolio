@@ -1,5 +1,13 @@
+.home-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 68px;
+}
+
 .inner-wrapper {
     max-width: 1200px;
+    padding: 0px 20px;
 }
 
 .sections-container {
@@ -8,7 +16,78 @@
     align-items: center;
 }
 
-.section {
-    min-height: 100vh;
+@keyframes animationName {
+    0% {
+        content: "Hi,";
+    }
+
+    33.33% {
+        content: "Enchante,";
+    }
+
+    66.66% {
+        content: "Konichiwa,";
+    }
 }
 
+.section {
+    display: flex;    
+    justify-content: center;
+    align-items: center;    
+    flex-wrap: wrap;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 1200px;
+
+    &.first {
+        gap: 80px;
+
+        .hero-left-frame {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 5px;
+
+            & > h1 {
+                font-size: 2.5rem;
+            }
+
+            .greet::before {
+                content: "Hi,";
+                animation: animationName infinite 3s;
+            }
+
+            .hero-description {
+                max-width: 350px;
+            }
+        }
+
+        & > img {
+            max-width: 100%;
+        }
+    }
+
+    &.second {
+        .inner-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+        
+        .skills-container {        
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            grid-gap: 5px;
+            width: 100%;
+        }
+
+        .skills-container > div {
+            font-size: 30px;
+            padding: .5em;
+            color: #ffffff;
+            background: #1c87c9;
+            text-align: center;
+        }
+    }
+}

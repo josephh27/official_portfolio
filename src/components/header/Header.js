@@ -15,8 +15,7 @@ const Header = () => {
 
     // For dynamic rendering
     const links = {
-        'Home': '#hero',
-        'About': '#about-container',
+        'Home': '#first-section',
         'Skills': '#skills-container',
         'Projects': '#projects-container',
         'Contact': '#contact-container'
@@ -56,9 +55,6 @@ const Header = () => {
                            return <a href={value} key={idx} onClick={() => resetActive()} className="menu-link">{key}</a>
                         })
                     }
-                    <li className="menu-item">
-                        <a href="#" className="menu-link">Home</a>
-                    </li>
                 </ul>
             </div>
             <a href="#" className="download-block">Download</a>
