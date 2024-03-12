@@ -1,6 +1,8 @@
 import React from 'react';
 import './Home.scss';
 import myImage from '../../assets/images/owner.png';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Home = () => {
   const skills = ["HTML", "CSS", "Javascript", "PHP", "C#",  "ReactJS", "Python", "SASS", "Git", "Bootstrap", 
@@ -31,14 +33,22 @@ const Home = () => {
                 <div className="skills-container">
                   {
                     skills.map((skill, idx) => {
-                      return <div key={idx}>{skill}</div>
+                      return (
+                      <div key={idx}>{skill} 
+                        <FontAwesomeIcon icon={faPlus} className="cross-icon" />
+                        <FontAwesomeIcon icon={faPlus} className="cross-icon" />
+                        <FontAwesomeIcon icon={faPlus} className="cross-icon" />
+                        <FontAwesomeIcon icon={faPlus} className="cross-icon" />
+                      </div>)
                     })
                   }
                 </div>
               </div>              
             </div>
             <div className="section third">
-              
+              <div className="inner-wrapper">
+                <h1>Projects</h1>
+              </div>
             </div>
             <div className="section fourth">
               
