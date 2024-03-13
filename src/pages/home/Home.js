@@ -3,10 +3,16 @@ import './Home.scss';
 import myImage from '../../assets/images/owner.png';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Html, Css } from '../../assets/images';
 
 const Home = () => {
-  const skills = ["HTML", "CSS", "Javascript", "PHP", "C#",  "ReactJS", "Python", "SASS", "Git", "Bootstrap", 
-  "NodeJS", "Flask", "MySQL", "Firebase", "Supabase", "Unity"]
+  // const skills = ["HTML", "CSS", "Javascript", "PHP", "C#",  "ReactJS", "Python", "SASS", "Git", "Bootstrap", 
+  // "NodeJS", "Flask", "MySQL", "Firebase", "Supabase", "Unity"]
+
+  const skillImageLinks = [
+    {name: 'HTML', src: Html},
+    {name: 'CSS', src: Css},
+  ]
 
   return (
     <div className="home-wrapper">
@@ -32,9 +38,11 @@ const Home = () => {
                 <h1>Skills</h1>
                 <div className="skills-container">
                   {
-                    skills.map((skill, idx) => {
+                    skillImageLinks.map((skill, idx) => {
                       return (
-                      <div key={idx}>{skill} 
+                      <div key={idx}>
+                        {skill['name']} 
+                        <img src={skill['src']} alt={skill['name']} />
                         <FontAwesomeIcon icon={faPlus} className="cross-icon" />
                         <FontAwesomeIcon icon={faPlus} className="cross-icon" />
                         <FontAwesomeIcon icon={faPlus} className="cross-icon" />
